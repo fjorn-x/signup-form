@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Sign-up</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-container">
+        <h1 class="text">RONIN</h1>
+      </div>
+
+      <div class="right-container">
+        <img src="./resources/logo.jpeg" alt="RONIN" />
+        <p class="right-text">
+          Learn the ways of the Samurai Warriors. Sign up now to become a
+          medieval japanese military commander.
+        </p>
+        <p class="quote">
+          "Engage in combat fully determined to die and you will be alive, wish
+          to survive in the battle and you will surely meet death."
+        </p>
+        <form id="sign-up-form">
+          <div class="wrapper">
+            <div class="left-fields">
+              <ul>
+                <li>
+                  <label for="first_name">FIRST NAME</label>
+                  <input type="text" name="first_name" id="first_name" />
+                </li>
+                <li>
+                  <label for="email">EMAIL</label>
+                  <input type="email" name="email" id="email" />
+                </li>
+                <li>
+                  <label for="password">PASSWORD</label>
+                  <input type="password" name="password" id="password" />
+                </li>
+              </ul>
+            </div>
+            <div class="right-fields">
+              <ul>
+                <li>
+                  <label for="last_name">LAST NAME</label>
+                  <input type="text" id="last_name" name="last_name" />
+                </li>
+                <li>
+                  <label for="phone">PHONE NUMBER</label>
+                  <input
+                    type="tel"
+                    inputmode="numeric"
+                    id="phone"
+                    name="phone"
+                    pattern="[0-9]+"
+                  />
+                </li>
+                <li>
+                  <label for="confirm_password">CONFIRM PASSWORD</label>
+                  <input
+                    type="password"
+                    name="confirm_password"
+                    id="confirm_password"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+        <button type="submit" class="create-account" form="sign-up-form">
+          Create Account
+        </button>
+        <p>Already have an account? <a href="#login">Log in</a></p>
+      </div>
+    </div>
+  </body>
+</html>
