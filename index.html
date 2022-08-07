@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Sign-up</title>
+    <script src="app.js" async defer></script>
   </head>
   <body>
     <div class="container">
@@ -29,15 +30,40 @@
               <ul>
                 <li>
                   <label for="first_name">FIRST NAME</label>
-                  <input type="text" name="first_name" id="first_name" />
+                  <input
+                    type="text"
+                    name="first_name"
+                    id="first_name"
+                    required
+                    placeholder=" "
+                  />
                 </li>
                 <li>
                   <label for="email">EMAIL</label>
-                  <input type="email" name="email" id="email" />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    placeholder=" "
+                  />
                 </li>
                 <li>
                   <label for="password">PASSWORD</label>
-                  <input type="password" name="password" id="password" />
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    required
+                    placeholder=" "
+                    minlength="8"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\p{P}\p{S}]).{8,}"
+                    title="Password must include atleast :
+8 characters,
+1 Uppercase Character,
+1 Number and
+1 Special Symbol."
+                  />
                 </li>
               </ul>
             </div>
@@ -45,7 +71,13 @@
               <ul>
                 <li>
                   <label for="last_name">LAST NAME</label>
-                  <input type="text" id="last_name" name="last_name" />
+                  <input
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    placeholder=" "
+                    required
+                  />
                 </li>
                 <li>
                   <label for="phone">PHONE NUMBER</label>
@@ -54,7 +86,10 @@
                     inputmode="numeric"
                     id="phone"
                     name="phone"
-                    pattern="[0-9]+"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                    placeholder=" "
                   />
                 </li>
                 <li>
@@ -63,16 +98,26 @@
                     type="password"
                     name="confirm_password"
                     id="confirm_password"
+                    required
+                    placeholder=" "
+                    minlength="8"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\p{P}\p{S}]).{8,}"
+                    title="Password must include atleast :
+8 characters,
+1 Uppercase Character,
+1 Number and
+1 Special Symbol."
                   />
                 </li>
               </ul>
             </div>
           </div>
+          <button type="submit" class="create-account" form="sign-up-form">
+            Create Account
+          </button>
         </form>
-        <button type="submit" class="create-account" form="sign-up-form">
-          Create Account
-        </button>
-        <p>Already have an account? <a href="#login">Log in</a></p>
+
+        <p>Already have an account? <a href="./#login">Log in</a></p>
       </div>
     </div>
   </body>
